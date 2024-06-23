@@ -1,0 +1,203 @@
+body {
+    width: 100%;
+    background-color: #1b1b1b;
+    padding: 0;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    font-family: Montserrat;
+    color: #FFF;
+}
+
+body img.main {
+    width: 824px;
+    height: 824px;
+    display: flex;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: 3rem;
+}
+
+div.main {
+    display: flex;
+    margin-left: 15rem;
+    margin-right: auto;
+    margin-top: 15%;
+    margin-bottom: auto;
+    flex-direction: column;
+    width: 600px;
+}
+
+div.main button {
+    width: 320px;
+    height: 60px;
+    font-size: 24px;
+    color: #FFF;
+    border-radius: 15px;
+    border: 1px #FFFFFF solid;
+    background: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+div.main button:hover {
+    width: 320px;
+    height: 60px;
+    font-size: 24px;
+    color: #4b9744;
+    border-radius: 15px;
+    border: 1px #4b9744 solid;
+    background: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+h1 {
+    line-height: 1.333;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+
+
+/* dialog */
+
+div.form {
+    width: 800px;
+    height: 720px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border-radius: 20px;
+    border: 1px #4d4d4d solid;
+}
+div.form-header {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 800px;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #4d4d4d;
+    color: #FFF;
+}
+
+div.form-header span.name {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 26px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+div.form-header span.status {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+div.form-header span.status img {
+    height: 10px;
+    width: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0.35rem;
+}
+
+div.form-body {
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    background-color: #7e7e7e;
+    color: #FFF;
+}
+
+div.form-body div.message {
+    display: inline-block;
+    margin-left: 1rem;
+    padding: 0.75rem;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: 600px;
+    max-height: 100px;
+    border-radius: 20px;
+    color: #FFF;
+    background-color: #4d4d4d;
+}
+
+div.form-body div.message-user {
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.75rem;
+    margin-left: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: 600px;
+    max-height: 100px;
+    border-radius: 20px;
+    color: #FFF;
+    background-color: #4d4d4d;
+}
+
+div.form-footer {
+    height: 100px;
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #4d4d4d;
+    color: #FFF;
+}
+
+div.form-footer input.message {
+    height: 40px;
+    width: 650px;
+    font-size: 18px;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px #a8a8a8 solid;
+    transition: 0.3s;
+}
+
+div.form-footer input.message:active {
+    height: 40px;
+    width: 650px;
+    font-size: 18px;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px #4b9744 solid;
+    transition: 0.3s;
+}
+
+div.form-footer button {
+    height: 40px;
+    width: 40px;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+div.form-footer button img {
+    height: 27px;
+    width: 30px;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}

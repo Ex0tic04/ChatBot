@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>ChatBOT</title>
+</head>
+<body>
+    <?php 
+        $user_message = $_POST['message'];
+    ?>
+    <div class="form" id="dialog">
+        <div class="form-header">
+            <span class="name">Мария</span><br>
+            <span class="status"><img src="green.gif"/>online</span>
+        </div>
+        <div class="form-body">
+            <div class="message">
+                <?php echo $message; ?>Здравствуйте! Введите ваш запрос
+            </div>
+            <div class="message-user">
+                Что такое ОВЗ?
+            </div>
+        </div>
+        <div class="form-footer">
+            <input class="message" type="text" placeholder="Введите сообщение..."> <button class="send"><img src="send.png"/></button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatForm = document.getElementById('chatForm');
+            const messageInput = chatForm.querySelector('.message');
+
+            chatForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Предотвращаем стандартное поведение формы
+
+                const message = messageInput.value;
+                if (!message.trim()) return; // Проверяем, не пустое ли сообщение
+
+                fetch('script.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: new URLSearchParams({
+                        message: message
+                    })
+                })
+            .then(response => response.text())
+            .then(data => {
+                    console.log(data); // Здесь вы можете обрабатывать ответ от сервера
+                    // Например, добавлять его в DOM
+                    const messageContainer = document.querySelector('.message');
+                    messageContainer.innerHTML += `${data}`; // Добавляем ответ бота в чат
+                })
+            .catch(error => console.error('Error: ', error));
+            });
+        });
+    </script>
+
+</body>
+</html>
